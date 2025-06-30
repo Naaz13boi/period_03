@@ -516,7 +516,7 @@ Group Size Statistics:
 
 def main():
     """Main function to run complete analysis and generate PDF report"""
-    filepath = "2024_fb_ads_president_scored_anon.csv"  # Change as needed
+    filepath = "D:/Data/period_03/period_03/2024_fb_ads_president_scored_anon.csv"  # Change as needed
     output_pdf = f"dataset_analysis_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.pdf"
     
     print("🚀 COMPREHENSIVE DATASET ANALYSIS WITH PDF REPORT")
