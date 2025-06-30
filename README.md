@@ -1,85 +1,133 @@
-Task_03_Descriptive_Stats
-This repository contains a comprehensive data analysis project that performs descriptive statistics using different Python libraries and approaches.
+# Task_03_Descriptive_Stats
 
-Project Structure
+This repository provides a comprehensive data analysis project focused on calculating descriptive statistics using various Python libraries and methodologies.
 
-Setup and Installation
-Clone the repository:
-git clone https://github.com/Naaz13boi/period_03.git
-cd Task_03_Descriptive_Stats
-Create and activate a virtual environment (optional but recommended):
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-Install dependencies:
-pip install -r requirements.txt
-Usage
-Each script can be run independently:
+## Project Structure
 
-python name.py
+The repository is organized as follows:
 
-Data Analysis Approach
-The analysis is performed using three different approaches:
+*   `withpanda.py`: A Python script demonstrating analysis with the Pandas library.
+*   `requirements.txt`: Lists all project dependencies.
+*   `README.md`: This file, containing project details.
 
-Pure Python: Uses only standard library to compute basic statistics
-Pandas: Utilizes pandas DataFrame operations for analysis
-Polars: Leverages Polars for high-performance data analysis
-Each script computes the following statistics:
+## Setup and Installation
 
-Count
-Mean (for numeric fields)
-Minimum and maximum values
-Standard deviation
-Unique value counts for non-numeric fields
-Most frequent values for non-numeric fields
-The analysis is performed at three levels:
+To get started with this project, follow these steps:
 
-Overall dataset
-Aggregated by page_id
-Aggregated by (page_id, ad_id)
-Key Findings
-Facebook Ads Dataset
-Ad Reach and Spending:
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/Naaz13boi/period_03.git
+    cd Task_03_Descriptive_Stats
+    ```
 
-Average estimated audience size: ~556,463 people
-Average estimated impressions: ~45,602
-Average estimated spend: $1,061
-Maximum spend on a single ad: $474,999
-Message Types:
+2.  **Create and activate a virtual environment** (recommended for managing dependencies):
+    *   On macOS/Linux:
+        ```bash
+        python3 -m venv venv
+        source venv/bin/activate
+        ```
+    *   On Windows:
+        ```bash
+        python -m venv venv
+        venv\Scripts\activate
+        ```
 
-57% of ads contain calls to action (CTA)
-55% use advocacy messaging
-38% focus on issue-based messaging
-27% contain attack messaging
-22% are image-based ads
-Campaign Focus:
+3.  **Install project dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-Economy is the most discussed topic (12% of ads)
-Health-related content appears in 11% of ads
-Social and cultural issues feature in 11% of ads
-Women's issues appear in 8% of ads
-Content Integrity:
+## Usage
 
-7% of ads were flagged for potential scam content
-5% had election integrity concerns
-Low incidence of incivility in messaging
-Facebook Posts Dataset
-Engagement Metrics:
-High variation in engagement levels across posts
-Comments and shares show strong correlation
-Emotional reactions (Love, Angry) provide insights into content reception
-Twitter Posts Dataset
-Content Analysis:
-Diverse range of topics covered
-Strong presence of political discourse
-Significant variation in engagement metrics
-Cross-Platform Insights
-Messaging Consistency:
+Each analysis script can be executed independently from the command line:
 
-Similar topic distributions across platforms
-Platform-specific engagement patterns
-Distinct audience targeting strategies
-Performance Metrics:
+```bash
+python <script_name.py>
+```
 
-Facebook ads show higher reach but at significant cost
-Organic posts demonstrate varied engagement patterns
-Twitter shows unique viral potential for certain content types
+For example, to run the Pandas analysis script:
+```bash
+python withpanda.py
+```
+
+## Data Analysis Approach
+
+This project explores descriptive statistics from three distinct perspectives:
+
+*   **Pure Python:** Employs only the Python standard library for fundamental statistical computations.
+*   **Pandas:** Leverages the powerful capabilities of the Pandas library for data manipulation and analysis.
+*   **Polars:** Utilizes the Polars library for high-performance data analysis, particularly effective with larger datasets.
+
+### Statistics Computed
+
+For each dataset and approach, the following descriptive statistics are calculated:
+
+*   **Count:** The total number of observations.
+*   **Mean:** The average value for numerical fields.
+*   **Minimum and Maximum:** The smallest and largest values observed.
+*   **Standard Deviation:** A measure of the dispersion of data points from the mean.
+*   **Unique Value Counts:** For categorical or non-numeric fields, the number of distinct values.
+*   **Most Frequent Values:** For non-numeric fields, the values that appear most often.
+
+### Levels of Analysis
+
+The analysis is conducted at three granularities:
+
+1.  **Overall Dataset:** Statistics for the entire dataset.
+2.  **Aggregated by page\_id:** Statistics grouped by the unique identifier for each page.
+3.  **Aggregated by (page\_id, ad\_id):** Statistics further broken down by page and advertisement identifiers.
+
+## Key Findings
+
+### Facebook Ads Dataset
+
+**Audience Reach and Financials:**
+*   The average estimated audience size reached by ads was approximately 556,463 individuals.
+*   On average, ads received around 45,602 impressions.
+*   The average reported spend per ad was $1,061.
+*   The highest recorded spend for a single ad reached $474,999.
+
+**Message Classification:**
+*   Approximately 57% of ads incorporated a call to action (CTA).
+*   A majority of ads, 55%, utilized advocacy messaging.
+*   Issue-based messaging was present in 38% of ads.
+*   Attack messaging was found in 27% of the ads.
+*   Image-based advertisements constituted 22% of the total.
+
+**Campaign Topic Focus:**
+*   The economy was the most frequently discussed topic, appearing in 12% of ads.
+*   Health-related content was featured in 11% of ads.
+*   Social and cultural issues comprised another 11% of the ad content.
+*   Women's issues were addressed in 8% of the ads.
+
+**Content Integrity:**
+*   A small percentage, 7%, of ads were identified as potentially containing scam content.
+*   Around 5% of ads raised concerns related to election integrity.
+*   The incidence of uncivil language within ad messaging was generally low.
+
+### Facebook Posts Dataset
+
+**Engagement Metrics:**
+*   Engagement levels varied significantly across different posts.
+*   A strong positive correlation was observed between the number of comments and shares.
+*   Emotional reactions, such as "Love" and "Angry," offered valuable insights into how content was received by the audience.
+
+### Twitter Posts Dataset
+
+**Content Analysis:**
+*   A wide array of topics were discussed in the tweets.
+*   Political discourse was a prominent theme.
+*   Engagement metrics exhibited considerable diversity.
+
+## Cross-Platform Insights
+
+**Messaging Consistency:**
+*   The distribution of topics across Facebook and Twitter was found to be broadly similar.
+*   Each platform demonstrated distinct patterns in user engagement.
+*   Audience targeting strategies appeared to differ across the platforms.
+
+**Performance Metrics:**
+*   Facebook advertisements generally achieved higher reach but incurred substantial costs.
+*   Organic posts on Facebook showed varied engagement outcomes.
+*   Twitter content demonstrated a notable potential for rapid and widespread dissemination (virality) for specific types of posts.
+
